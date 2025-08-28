@@ -2,9 +2,14 @@ name: manually
 
 on: 
   workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name'
+        type: string
+        default: 'test'
 
 jobs:
-  practice:
+  dispatch_with_inputs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello from practice"
