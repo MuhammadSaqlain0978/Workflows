@@ -1,45 +1,3 @@
-# name: manually
-
-# on: 
-#   workflow_dispatch:
-#     inputs:
-#       name:
-#         description: 'Name'
-#         type: string
-#         default: 'test'
-
-# jobs:
-#   dispatch_with_inputs:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - run: echo "hello from practice"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 name: workflow_dispatch with inputs
@@ -52,6 +10,11 @@ on:
         type: string
         default: "sequ"
 
+      age:
+        description: "Age"
+        type: number
+        required: true
+
 
 
 
@@ -60,3 +23,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - run: echo "hello ${{ inputs.name }}"
+
+     - run: echo "Age is: ${{ inputs.age }}"
