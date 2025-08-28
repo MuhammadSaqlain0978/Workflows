@@ -1,0 +1,6 @@
+name: workflow pr
+
+on:
+  pull_request:
+    branches:
+      - main
