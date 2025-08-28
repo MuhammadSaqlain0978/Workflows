@@ -1,16 +1,62 @@
-name: manually
+# name: manually
+
+# on: 
+#   workflow_dispatch:
+#     inputs:
+#       name:
+#         description: 'Name'
+#         type: string
+#         default: 'test'
+
+# jobs:
+#   dispatch_with_inputs:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: echo "hello from practice"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+name: workflow_dispatch with inputs
 
 on: 
   workflow_dispatch:
     inputs:
-      name:
-        description: 'Name'
+      name: 
+        description: "Test"
         type: string
-        default: 'test'
+        default: "sequ"
+
+
+
 
 jobs:
-  dispatch_with_inputs:
+  with_input:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello from practice"
-   
+     - run: echo "hello ${{ inputs.name }}"
