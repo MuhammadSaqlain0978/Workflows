@@ -15,6 +15,17 @@ on:
         type: number
         required: true
 
+      gender:
+        description: "Gender"
+        type: choice
+        options: 
+          - Male
+          - Female
+
+      status:
+       description: "Marrid/Unmarried"
+       type: boolean
+
 
 
 
@@ -23,7 +34,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Name 
-        run: echo "hello $ {{ inputs.name }}"
+        run: echo "hello $ {{ inputs.name }} "
 
       - name: Ages
-        run: echo "Age is $ {{ inputs.age }}"
+        run: echo "Age is $ {{ inputs.age }} "
+
+
+      - name: Gender
+        run: echo "Gender:  $ {{ inputs.gender }} "
+
+      - name: Status
+        run: echo "Status: $ {{ inputs.status }} "
