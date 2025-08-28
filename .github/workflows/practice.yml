@@ -22,6 +22,8 @@ jobs:
   with_input:
     runs-on: ubuntu-latest
     steps:
-     - run: echo "hello ${{ inputs.name }}"
+      - name: Name 
+        run: echo "hello $ {{ inputs.name }}"
 
-     - run: echo "Age is: ${{ inputs.age }}"
+      - name: Ages
+        run: echo "Age is $ {{ inputs.age }}"
